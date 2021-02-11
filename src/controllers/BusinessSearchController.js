@@ -3,7 +3,7 @@ const dataObject = require("../helper/dataObject");
 
 class BusinessSearchController {
   constructor() {
-    this.businessSearchService = new BusinessSearchService();
+    this.businessSearchService = BusinessSearchService;
   }
 
   async getFormatedBusinesses() {
@@ -13,4 +13,4 @@ class BusinessSearchController {
   }
 }
 
-module.exports = BusinessSearchController;
+module.exports = new BusinessSearchController();

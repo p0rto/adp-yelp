@@ -2,7 +2,7 @@ const RequestService = require("./RequestService");
 
 class BusinessSearchService {
   constructor() {
-    this.requestService = new RequestService();
+    this.requestService = RequestService;
     this.baseUri = "/businesses";
   }
 
@@ -46,4 +46,4 @@ class BusinessSearchService {
   }
 }
 
-module.exports = BusinessSearchService;
+module.exports = new BusinessSearchService();

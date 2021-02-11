@@ -22,4 +22,4 @@ class RequestService {
   }
 }
 
-module.exports = RequestService;
+module.exports = new RequestService();

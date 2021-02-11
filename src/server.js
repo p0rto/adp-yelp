@@ -11,9 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
-const businessSearchService = new BusinessSearchService();
-const formatedData = businessSearchService.formatBusinessesToOutput(dataObject);
-
+const formatedData = BusinessSearchService.formatBusinessesToOutput(dataObject);
 formatedData.then((response) => console.log(response));
 
 app.listen(3001, () => console.log("Up and running."));
